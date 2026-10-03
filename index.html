@@ -58,15 +58,11 @@ body{
     padding:30px 22px 24px;
     text-align:center;
     border-radius:26px;
-
     background:rgba(8,18,28,.94);
-
     border:1px solid rgba(0,229,255,.25);
-
     box-shadow:
         0 0 30px rgba(0,229,255,.12),
         0 20px 60px rgba(0,0,0,.55);
-
     overflow:hidden;
 }
 
@@ -82,6 +78,8 @@ body{
     left:-60px;
 }
 
+/* TOP BADGE */
+
 .live{
     position:relative;
     display:inline-block;
@@ -96,21 +94,42 @@ body{
     border:1px solid rgba(0,229,255,.25);
 }
 
+/* PERFECT ROUND PROFILE IMAGE */
+
 .profile{
     position:relative;
-    width:112px;
-    height:112px;
-    object-fit:cover;
+
+    width:120px;
+    height:120px;
+
+    display:block;
+    margin:0 auto 14px;
+
     border-radius:50%;
+
+    object-fit:cover;
+    object-position:center;
+
+    aspect-ratio:1 / 1;
+
     border:4px solid #00e5ff;
+
+    background:#07131d;
+
     box-shadow:
-        0 0 20px rgba(0,229,255,.45);
-    margin-bottom:12px;
+        0 0 0 3px rgba(0,229,255,.10),
+        0 0 25px rgba(0,229,255,.45),
+        0 0 55px rgba(0,229,255,.15);
+
+    overflow:hidden;
 }
+
+/* NAME */
 
 h2{
     position:relative;
     margin:5px 0 12px;
+
     font-size:clamp(25px,7vw,34px);
     line-height:1.2;
     font-weight:800;
@@ -118,22 +137,32 @@ h2{
     background:linear-gradient(
         90deg,
         #ffd700,
-        #fff,
+        #ffffff,
         #00e5ff,
         #ffd700
     );
 
     background-size:250% auto;
+
     -webkit-background-clip:text;
+    background-clip:text;
+
     -webkit-text-fill-color:transparent;
 
     animation:shine 3s linear infinite;
 }
 
 @keyframes shine{
-    0%{background-position:0% center}
-    100%{background-position:250% center}
+    0%{
+        background-position:0% center;
+    }
+
+    100%{
+        background-position:250% center;
+    }
 }
+
+/* SUBTITLE */
 
 .subtitle{
     position:relative;
@@ -144,14 +173,20 @@ h2{
     max-width:360px;
 }
 
+/* TELEGRAM BUTTON */
+
 .btn{
     position:relative;
+
     display:block;
     width:100%;
+
     padding:15px 18px;
+
     border-radius:14px;
 
     text-decoration:none;
+
     font-size:16px;
     font-weight:800;
     letter-spacing:.3px;
@@ -172,6 +207,7 @@ h2{
 
 .btn:hover{
     transform:translateY(-2px);
+
     box-shadow:
         0 12px 30px rgba(0,229,255,.4);
 }
@@ -181,58 +217,83 @@ h2{
 }
 
 @keyframes pulse{
-    0%{box-shadow:0 0 0 0 rgba(0,229,255,.45)}
-    70%{box-shadow:0 0 0 12px rgba(0,229,255,0)}
-    100%{box-shadow:0 0 0 0 rgba(0,229,255,0)}
+
+    0%{
+        box-shadow:0 0 0 0 rgba(0,229,255,.45);
+    }
+
+    70%{
+        box-shadow:0 0 0 12px rgba(0,229,255,0);
+    }
+
+    100%{
+        box-shadow:0 0 0 0 rgba(0,229,255,0);
+    }
+
 }
+
+/* FEATURES */
 
 .list{
     position:relative;
+
     margin-top:22px;
+
     display:grid;
     gap:9px;
 }
 
 .list div{
     padding:11px 10px;
+
     border-radius:11px;
+
     text-align:left;
+
     font-size:12px;
     font-weight:600;
+
     color:#e8f7fa;
 
     background:rgba(255,255,255,.045);
+
     border:1px solid rgba(255,255,255,.07);
 }
 
-.list div::first-letter{
-    color:#00e5ff;
-}
+/* BOTTOM */
 
 .timer{
     position:relative;
+
     margin-top:20px;
+
     font-size:12px;
     font-weight:600;
+
     color:#9db0bd;
 }
 
-/* AGENCY CREDIT */
+/* AGENCY */
 
 .agency{
     position:relative;
+
     margin-top:18px;
     padding-top:15px;
+
     border-top:1px solid rgba(255,255,255,.08);
 
     font-size:10px;
     color:#71818c;
+
     letter-spacing:.3px;
 }
 
 .agency a{
     color:#00e5ff;
+
     text-decoration:none;
+
     font-weight:700;
 }
 
@@ -240,14 +301,17 @@ h2{
     text-decoration:underline;
 }
 
+/* MOBILE */
+
 @media(max-width:380px){
+
     .card{
         padding:25px 17px 20px;
     }
 
     .profile{
-        width:95px;
-        height:95px;
+        width:105px;
+        height:105px;
     }
 
     h2{
@@ -257,6 +321,7 @@ h2{
     .btn{
         font-size:15px;
     }
+
 }
 
 </style>
@@ -272,10 +337,13 @@ h2{
         📈 PREMIUM STOCK MARKET UPDATES
     </div>
 
+    <!-- ROUND PROFILE IMAGE -->
+
     <img
         src="images/profile.jpg"
         class="profile"
         alt="Gokul Chhabra"
+        loading="eager"
     >
 
     <h2>💎 Gokul Chhabra 💎</h2>
@@ -311,7 +379,7 @@ h2{
         📊 FREE MARKET UPDATES
     </div>
 
-    <!-- AGENCY CREDIT + LINK -->
+    <!-- AGENCY CREDIT -->
 
     <div class="agency">
         Ads & Landing Page by
