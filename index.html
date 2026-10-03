@@ -4,217 +4,201 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Trade With Munaaf</title>
+<title>Gokul Chhabra</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1559819568726423');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1559819568726423&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+/* ============================= */
+/* MAIN HEADLINE */
+/* ============================= */
+
+.card h2 {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+
+    margin: 15px 0 10px;
+    padding: 0 5px;
+
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+
+    font-size: clamp(22px, 7vw, 34px);
+    line-height: 1.2;
+    font-weight: 800;
+
+    background: linear-gradient(
+        90deg,
+        #ffd700,
+        #ffffff,
+        #00e5ff,
+        #ffd700
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    background-size: 250% auto;
+
+    animation: headlineGlow 3s linear infinite;
+
+    text-shadow:
+        0 0 12px rgba(255,215,0,0.35),
+        0 0 25px rgba(0,229,255,0.20);
 }
 
-body{
-background:#0f172a;
-display:flex;
-justify-content:center;
-align-items:center;
-min-height:100vh;
-color:#fff;
+@keyframes headlineGlow {
+
+    0% {
+        background-position: 0% center;
+    }
+
+    100% {
+        background-position: 250% center;
+    }
+
 }
 
-/* CARD */
 
-.container{
-width:95%;
-max-width:420px;
-padding:30px 25px;
-border-radius:18px;
+/* ============================= */
+/* TOP LINE */
+/* ============================= */
 
-background:rgba(255,255,255,0.05);
-backdrop-filter:blur(12px);
-
-border:1px solid rgba(255,255,255,0.08);
-
-box-shadow:0 20px 60px rgba(0,0,0,0.6);
-text-align:center;
+.live {
+    font-weight: 700;
+    text-align: center;
+    color: #00e5ff;
+    margin-bottom: 8px;
 }
 
-/* LOGO */
 
-.logo{
-width:80px;
-height:80px;
-border-radius:50%;
-border:2px solid #FFD700;
-margin-bottom:12px;
+/* ============================= */
+/* SUBTITLE */
+/* ============================= */
+
+.subtitle {
+    text-align: center;
+    line-height: 1.6;
+    margin: 0 auto 20px;
 }
 
-/* TEXT */
 
-h1{
-font-size:22px;
-color:#FFD700;
-margin-bottom:6px;
+/* ============================= */
+/* TELEGRAM BUTTON */
+/* ============================= */
+
+.btn {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 800;
 }
 
-h2{
-font-size:15px;
-opacity:0.9;
-margin-bottom:10px;
-}
 
-.sub{
-font-size:13px;
-opacity:0.7;
-margin-bottom:18px;
-}
+/* ============================= */
+/* POPUP */
+/* ============================= */
 
-/* BUTTON */
-
-.btn{
-display:block;
-text-decoration:none;
-background:#22c55e;
-color:#000;
-font-weight:700;
-padding:16px;
-border-radius:10px;
-margin:12px 0;
-transition:0.3s;
-}
-
-.btn:hover{
-background:#16a34a;
-transform:scale(1.03);
-}
-
-/* TRUST BOX */
-
-.trust{
-background:rgba(0,255,150,0.08);
-padding:10px;
-border-radius:10px;
-font-size:13px;
-margin-bottom:15px;
-border:1px solid rgba(0,255,150,0.2);
-}
-
-/* LIST */
-
-.points{
-list-style:none;
-font-size:14px;
-text-align:left;
-margin:15px 0;
-}
-
-.points li{
-margin:8px 0;
-}
-
-/* URGENCY */
-
-.timer{
-margin-top:10px;
-font-size:13px;
-color:#facc15;
-}
-
-/* SOCIAL PROOF */
-
-.proof{
-margin-top:12px;
-font-size:12px;
-opacity:0.7;
-}
-
-/* FOOTER BRAND */
-
-.footer{
-margin-top:20px;
-font-size:12px;
-opacity:0.6;
-}
-
-.footer a{
-color:#38bdf8;
-text-decoration:none;
-font-weight:600;
-}
-
-.footer a:hover{
-text-decoration:underline;
-}
-
-/* RISK */
-
-.risk{
-margin-top:10px;
-font-size:11px;
-opacity:0.5;
+.popup {
+    display: none;
 }
 
 </style>
+
 </head>
 
 <body>
 
 <div class="container">
 
-<img src="https://i.ibb.co/HThtfpR7/Whats-App-Image-2026-01-30-at-8-54-08-PM.jpg" class="logo">
+    <div class="card">
 
-<h1>TRADE WITH MUNAAF</h1>
-<h2>NIFTY • BANKNIFTY • OPTIONS</h2>
+        <!-- TOP LINE -->
 
-<p class="sub">
-Daily Intraday Trading Signals & Analysis
-</p>
+        <div class="live">
+            📈 PREMIUM STOCK MARKET UPDATES
+        </div>
 
-<!-- TOP BUTTON -->
-<a href="https://t.me/+2PsKWi3L1Uk3NjZl" class="btn">
-🚀 Join Free Telegram Channel
+
+        <!-- PROFILE -->
+
+        <img src="images/profile.jpg" class="profile">
+
+
+        <!-- MAIN HEADLINE -->
+
+        <h2>💎Gokul Chhabra💎</h2>
+
+
+        <!-- SUBTITLE -->
+
+        <p class="subtitle">
+            Get Daily Stock Market Updates, Market Analysis & Trading Insights
+        </p>
+
+
+        <!-- ONLY ONE BUTTON -->
+
+        <a
+            href="https://t.me/+bTgKeVKz-8FmOTU1"
+            class="btn pulse"
+        >
+            🚀 JOIN TELEGRAM
+        </a>
+
+
+        <!-- FEATURES -->
+
+        <div class="list">
+
+            <div>✔ NIFTY 50 ANALYSIS</div>
+
+            <div>✔ BANK NIFTY UPDATES</div>
+
+            <div>✔ STOCK MARKET INSIGHTS</div>
+
+            <div>✔ INTRADAY MARKET UPDATES</div>
+
+            <div>✔ DAILY MARKET LEVELS</div>
+
+        </div>
+
+
+        <!-- BOTTOM TEXT -->
+
+        <div class="timer">
+            📊 FREE MARKET UPDATES
+        </div>
+<a href="https://telegram.me/+3XoqJNLxYHswNTc1"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="agency-link">
+    Powered by <strong>Adbuildagency</strong>
 </a>
-
-<div class="trust">
-✔ Trusted by 5,000+ Traders <br>
-✔ Daily Consistent Setups
-</div>
-
-<ul class="points">
-<li>✔ 5–7 High Probability Trades</li>
-<li>✔ Exact Entry, SL & Target</li>
-<li>✔ Beginner Friendly Guidance</li>
-<li>✔ Live Market Updates</li>
-</ul>
-
-<!-- BOTTOM BUTTON -->
-<a href="https://t.me/+2PsKWi3L1Uk3NjZl" class="btn">
-🚀 Join Free Telegram Channel
-</a>
-
-<div class="timer">
-⏳ Free Access Closing Soon
-</div>
-
-<div class="proof">
-📈 Limited Seats • Active Community
-</div>
-
-<p class="risk">
-⚠ Market investments are subject to risk
-</p>
-
-<!-- CLEAN FOOTER -->
-<div class="footer">
-Powered by 
-<a href="https://t.me/+3XoqJNLxYHswNTc1" target="_blank">
-AdsBuild Agency
-</a>
-</div>
+    </div>
 
 </div>
 
